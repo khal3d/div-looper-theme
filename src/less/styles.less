@@ -1,0 +1,125 @@
+@black: #333;
+@red: #c00;
+@white: #fff;
+@navbar-height: 75px;
+
+body {
+    padding-top: @navbar-height;
+    font-family: 'Droid Serif', serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    min-height: @navbar-height;
+    color: @white;
+    border-top: 5px solid #FFCC00;
+    &.navbar-divlooper {
+        background-color: @black;
+        height: @navbar-height;
+        line-height: @navbar-height;
+        color: @white;
+        a {
+            color: @white;
+            &:hover {
+                color: @black;
+            }
+        }
+
+        .navbar-brand {
+            font-size: 26pt;
+            background-color: @red;
+            min-width: 185px;
+            height: @navbar-height;
+            line-height: @navbar-height;
+            padding: 0 10px;
+            text-align: center;
+            margin-right: 10px;
+            &:hover {
+                text-decoration: underline;
+                color: @white;
+            }
+        }
+        .navbar-brand-slogan {
+            font-size: 15pt;
+        }
+    }
+
+    .container-fluid {
+        background-color: @black;
+    }
+    .collapse {
+        // width: 100%;
+    }
+
+    .navbar-nav {
+        line-height: @navbar-height;
+        li {
+            a {
+                line-height: @navbar-height;
+                padding-top: 0;
+                padding-bottom: 0;
+                &:hover {
+                    color: darken(@white, 10%);
+                    background-color: lighten(@black, 5%);
+
+                }
+            }
+        }
+    }
+
+    .navbar-toggle {
+        background-color: @white;
+        margin-top: 20px;
+        .icon-bar {
+            background-color: @black;
+        }
+    }
+}
+
+article {
+    padding-top: 50px;
+    margin-bottom: 20px;
+    font-size: 15pt;
+    line-height: 150%;
+
+    .post {
+        border-bottom: 1px solid lighten(@black, 70%);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: relative;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: lighten(@black, 70%) 1px solid;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -5px;
+            background: lighten(@black, 70%);
+
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            border-radius: 100%;
+
+            box-shadow: #FFF 0 0 0 10px;
+        }
+
+        .page-header {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Headroom.js */
+.headroom { transition: top 0.7s ease; }
+.headroom--unpinned { top: -@navbar-height; }

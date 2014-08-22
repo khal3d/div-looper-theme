@@ -1,0 +1,27 @@
+{
+  "name": "layout",
+  "version": "0.0.1",
+  "authors": [
+    "Khaled Attia <khaled.attia@googlemail.com>"
+  ],
+  "description": "Personal Layout",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "http://khal3d.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.1.0",
+    "headroom.js": "~0.7.0",
+    "animate.css": "~3.2.0"
+  }
+}
